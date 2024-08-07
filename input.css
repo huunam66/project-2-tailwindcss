@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-Alata;
+  }
+}
+
+#hamb-menu-fixed {
+  @apply hidden fixed top-0 left-0 right-0 bottom-0 z-[99999] bg-black bg-opacity-75 backdrop-blur-lg;
+}
+
+#hamb-menu-container {
+  @apply h-full flex flex-col justify-center items-center space-y-6 overflow-hidden;
+}
+
+.open {
+  @apply !flex justify-center items-center;
+}
+
+.open #hamb-menu-container {
+  @apply animate-grow-menu transition-all duration-300;
+}
+
+#btn-menu .ds-1 {
+  @apply translate-y-[15px] rotate-45;
+}
+
+#btn-menu .ds-2 {
+  @apply translate-y-5;
+}
+
+#btn-menu .ds-3 {
+  @apply -translate-y-[15px] -rotate-45;
+}
